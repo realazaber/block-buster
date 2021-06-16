@@ -258,7 +258,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268734477}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1665,6 +1665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769195964}
   - component: {fileID: 1769195965}
+  - component: {fileID: 1769195966}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1698,12 +1699,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f09b82baa57d749b46cb4cdb199ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _topPlayer: {fileID: 268734477}
-  _topPlayerRB: {fileID: 268734479}
-  _bottomPlayer: {fileID: 394886192}
-  _bottomPlayerRB: {fileID: 394886194}
+  _player: {fileID: 268734477}
+  _playerRigidbody: {fileID: 268734479}
   _speed: 10
   _jumpHeight: 350
+  _right: 100
+  _left: 97
+  _jump: 119
+  _bothJump: 32
+  _sprint: 304
+--- !u!114 &1769195966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769195963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1f09b82baa57d749b46cb4cdb199ad1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 394886192}
+  _playerRigidbody: {fileID: 394886194}
+  _speed: 10
+  _jumpHeight: 350
+  _right: 275
+  _left: 276
+  _jump: 273
+  _bothJump: 32
+  _sprint: 303
 --- !u!1 &1906582107
 GameObject:
   m_ObjectHideFlags: 0

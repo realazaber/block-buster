@@ -5,56 +5,65 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public GameObject _topPlayer;
-    public Rigidbody _topPlayerRB;
+    public GameObject _player;
+    public Rigidbody _playerRigidbody;
 
-    public GameObject _bottomPlayer;
-    public Rigidbody _bottomPlayerRB;
+    public float _speed = 10;
+    public float _jumpHeight = 350;
 
-    public float _speed;
-    public float _jumpHeight;
+    //Keys
+    public KeyCode _right;
+    public KeyCode _left;
+    public KeyCode _jump;
+    public KeyCode _bothJump;
+    public KeyCode _sprint;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(_sprint))
         {
             _speed *= 2;
             print("Sprint speed " + _speed);
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(_sprint))
         {
             _speed /= 2;
             print("Walk speed " + _speed);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(_right))
         {
             
-            _topPlayer.transform.position += transform.right * _speed * Time.deltaTime;
-            print("Top player move right");
-            if (Input.GetKeyDown(KeyCode.W))
+            _player.transform.position += transform.right * _speed * Time.deltaTime;
+            print("Player move right");         
+            if (Input.GetKeyDown(_jump))
             {
-
-                _topPlayerRB.AddForce(transform.up * _jumpHeight);
-                print("Top player jump");
+                _playerRigidbody.AddForce(transform.up * _jumpHeight);
+                print("Player jump");
             }
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(_left))
         {
 
-            _topPlayer.transform.position -= transform.right * _speed * Time.deltaTime;
-            print("Top player move left");
-            if (Input.GetKeyDown(KeyCode.W))
+            _player.transform.position -= transform.right * _speed * Time.deltaTime;
+            print("Player move left");
+            if (Input.GetKeyDown(_jump))
             {
 
-                _topPlayerRB.AddForce(transform.up * _jumpHeight);
-                print("Top player jump");
+                _playerRigidbody.AddForce(transform.up * _jumpHeight);
+                print("Player jump");
             }
         }
-  
+        else if (Input.GetKeyDown(_jump))
+        {
+
+            _playerRigidbody.AddForce(transform.up * _jumpHeight);
+            print("Top player jump");
+        }
+
 
     }
 }
