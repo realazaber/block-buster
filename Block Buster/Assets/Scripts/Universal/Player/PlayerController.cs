@@ -13,11 +13,24 @@ public class PlayerController : MonoBehaviour
 
     //Keys
     public KeyCode _right;
+    public GameObject _faceRightModel;
+
     public KeyCode _left;
+    public GameObject _faceLeftModel;
+
     public KeyCode _jump;
+
     public KeyCode _bothJump;
+    public GameObject _otherPlayer;
+    public Rigidbody _otherPlayerRigidbody;
     public KeyCode _sprint;
 
+
+    private void Start()
+    {
+        _faceRightModel.SetActive(true);
+        _faceLeftModel.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,9 +49,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(_right))
         {
-            
+            _faceRightModel.SetActive(true);
+            _faceLeftModel.SetActive(false);
             _player.transform.position += transform.right * _speed * Time.deltaTime;
-            print("Player move right");         
+            print("Player move right");
             if (Input.GetKeyDown(_jump))
             {
                 _playerRigidbody.AddForce(transform.up * _jumpHeight);
@@ -47,7 +61,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKey(_left))
         {
-
+            _faceRightModel.SetActive(false);
+            _faceLeftModel.SetActive(true);
             _player.transform.position -= transform.right * _speed * Time.deltaTime;
             print("Player move left");
             if (Input.GetKeyDown(_jump))
@@ -63,7 +78,11 @@ public class PlayerController : MonoBehaviour
             _playerRigidbody.AddForce(transform.up * _jumpHeight);
             print("Top player jump");
         }
-
-
+        else if (Input.GetKeyDown(_bothJump))
+        {
+            _playerRigidbody.AddForce(transform.up * _jumpHeight);
+            _otherPlayerRigidbody.AddForce(transform.up * _jumpHeight);
+            print("Both jump");
+        }
     }
 }
