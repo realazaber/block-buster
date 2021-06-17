@@ -12,13 +12,11 @@ public class ExitDoor : MonoBehaviour
         _blinker.SetActive(false);
     }
 
-
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            print("Load next level");
+            print("Player entered exit: TURN ON BLINKER");
             _blinker.SetActive(true);
         }
     }
@@ -27,7 +25,7 @@ public class ExitDoor : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            print("Blinker off");
+            print("Player left exit: TURN OFF BLINKER");
             _blinker.SetActive(false);
         }
     }

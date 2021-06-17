@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
+            print("Touched the ground");
             _jumpCount = 0;
         }
     }
