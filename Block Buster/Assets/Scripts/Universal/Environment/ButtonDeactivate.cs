@@ -22,6 +22,11 @@ public class ButtonDeactivate : MonoBehaviour
                 print("Button pressed");
                 _objectToDeactivate.SetActive(false);
             }
+            if (Input.GetKey(KeyCode.Q))
+            {
+                print("Button pressed");
+                _objectToDeactivate.SetActive(false);
+            }
         }
 
     }
