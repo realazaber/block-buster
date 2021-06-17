@@ -39,13 +39,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(_sprint))
         {
-            _speed *= 2;
+            _speed *= 1.5f;
             print("Sprint speed " + _speed);
         }
 
         if (Input.GetKeyUp(_sprint))
         {
-            _speed /= 2;
+            _speed /= 1.5f;
             print("Walk speed " + _speed);
         }
 
