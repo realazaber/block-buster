@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
     public Rigidbody _playerRigidbody;
 
     public float _speed = 10;
+
     public float _jumpHeight = 350;
+    public int _jumpCount = 0;
 
     //Keys
     public KeyCode _right;
@@ -72,17 +74,26 @@ public class PlayerController : MonoBehaviour
                 print("Player jump");
             }
         }
-        else if (Input.GetKeyDown(_jump))
+        else if (Input.GetKeyDown(_jump) && _jumpCount < 2)
         {
-
+            _jumpCount++;
             _playerRigidbody.AddForce(transform.up * _jumpHeight);
             print("Top player jump");
         }
-        else if (Input.GetKeyDown(_bothJump))
+        else if (Input.GetKeyDown(_bothJump) && _jumpCount < 2)
         {
+            _jumpCount++;
             _playerRigidbody.AddForce(transform.up * _jumpHeight);
             _otherPlayerRigidbody.AddForce(transform.up * _jumpHeight);
             print("Both jump");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            _jumpCount = 0;
         }
     }
 }

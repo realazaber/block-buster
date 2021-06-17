@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 268734478}
   - component: {fileID: 268734481}
   - component: {fileID: 268734479}
+  - component: {fileID: 268734480}
   m_Layer: 0
   m_Name: TopPlayer
   m_TagString: Player
@@ -430,6 +431,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &268734480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268734477}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &268734481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -585,7 +599,7 @@ GameObject:
   - component: {fileID: 329038354}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -681,7 +695,7 @@ GameObject:
   - component: {fileID: 339477956}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -857,6 +871,7 @@ GameObject:
   - component: {fileID: 394886193}
   - component: {fileID: 394886196}
   - component: {fileID: 394886194}
+  - component: {fileID: 394886195}
   m_Layer: 0
   m_Name: BottomPlayer
   m_TagString: Player
@@ -896,6 +911,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &394886195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394886192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &394886196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2756,6 +2784,7 @@ MonoBehaviour:
   _playerRigidbody: {fileID: 268734479}
   _speed: 10
   _jumpHeight: 350
+  _jumpCount: 0
   _right: 100
   _faceRightModel: {fileID: 778072560}
   _left: 97
@@ -2781,6 +2810,7 @@ MonoBehaviour:
   _playerRigidbody: {fileID: 394886194}
   _speed: 10
   _jumpHeight: 350
+  _jumpCount: 0
   _right: 275
   _faceRightModel: {fileID: 2028989182}
   _left: 276
