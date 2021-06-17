@@ -55,8 +55,9 @@ public class PlayerController : MonoBehaviour
             _faceLeftModel.SetActive(false);
             _player.transform.position += transform.right * _speed * Time.deltaTime;
             print("Player move right");
-            if (Input.GetKeyDown(_jump))
+            if (Input.GetKeyDown(_jump) && _jumpCount < 2)
             {
+                _jumpCount++;
                 _playerRigidbody.AddForce(transform.up * _jumpHeight);
                 print("Player jump");
             }
@@ -67,9 +68,9 @@ public class PlayerController : MonoBehaviour
             _faceLeftModel.SetActive(true);
             _player.transform.position -= transform.right * _speed * Time.deltaTime;
             print("Player move left");
-            if (Input.GetKeyDown(_jump))
+            if (Input.GetKeyDown(_jump) && _jumpCount < 2)
             {
-
+                _jumpCount++;
                 _playerRigidbody.AddForce(transform.up * _jumpHeight);
                 print("Player jump");
             }
