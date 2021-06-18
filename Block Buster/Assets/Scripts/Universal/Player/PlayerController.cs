@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public GameObject _player;
     public Rigidbody _playerRigidbody;
 
-    public float _speed = 10;
+    public float _speed;
 
     public float _jumpHeight = 350;
     public int _jumpCount = 0;
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             _faceRightModel.SetActive(true);
             _faceLeftModel.SetActive(false);
-            _player.transform.position += transform.right * _speed * Time.deltaTime;
+            _playerRigidbody.AddForce(transform.right * _speed);
             print("Player move right");
             if (Input.GetKeyDown(_jump) && _jumpCount < 2)
             {
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             _faceRightModel.SetActive(false);
             _faceLeftModel.SetActive(true);
-            _player.transform.position -= transform.right * _speed * Time.deltaTime;
+            _playerRigidbody.AddForce(transform.right * _speed * -1);
             print("Player move left");
             if (Input.GetKeyDown(_jump) && _jumpCount < 2)
             {
