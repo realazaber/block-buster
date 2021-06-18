@@ -1227,7 +1227,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283063346}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2055,7 +2055,7 @@ PrefabInstance:
     - target: {fileID: 2545165204112467846, guid: da02de10619a78e499d8728acee6dafe,
         type: 3}
       propertyPath: _speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2545165204112467846, guid: da02de10619a78e499d8728acee6dafe,
         type: 3}
@@ -2427,7 +2427,7 @@ PrefabInstance:
     - target: {fileID: 7048179827246676828, guid: 5d84c3882b3adfb4db4185c53be1f535,
         type: 3}
       propertyPath: _speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7048179827246676828, guid: 5d84c3882b3adfb4db4185c53be1f535,
         type: 3}
@@ -2448,6 +2448,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2091214207}
     m_Modifications:
+    - target: {fileID: 8434480519491889576, guid: bdb35bd4a21e26540a19d888b044d195,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8434480519582613402, guid: bdb35bd4a21e26540a19d888b044d195,
         type: 3}
       propertyPath: m_Name
