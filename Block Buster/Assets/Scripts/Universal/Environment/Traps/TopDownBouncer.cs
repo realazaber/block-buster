@@ -5,6 +5,12 @@ using UnityEngine;
 public class TopDownBouncer : MonoBehaviour
 {
     public float _speed;
+    private Rigidbody _rb;
+
+    private void Start()
+    {
+        _rb = gameObject.GetComponent<Rigidbody>();
+    }
 
     // Update is called once per frame
     void Update()
