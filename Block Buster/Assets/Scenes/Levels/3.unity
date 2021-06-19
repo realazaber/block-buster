@@ -3233,7 +3233,7 @@ PrefabInstance:
     - target: {fileID: 3345078733022203652, guid: 6e8ddb70c35df3945b7a81c27537ece6,
         type: 3}
       propertyPath: _nextLevel
-      value: 3
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 3345078733022203652, guid: 6e8ddb70c35df3945b7a81c27537ece6,
         type: 3}
