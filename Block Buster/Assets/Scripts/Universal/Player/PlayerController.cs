@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public float _speed;
 
-    public float _jumpHeight = 350;
+    public float _jumpHeight = 400;
     public int _jumpCount = 0;
     public int _maxJumps = 1;
 
