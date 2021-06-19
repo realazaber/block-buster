@@ -17,6 +17,6 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rb.AddForce(transform.forward * _speed * Time.deltaTime);
+        _rb.AddForce(transform.right * -1 * _speed * Time.deltaTime);
     }
 }

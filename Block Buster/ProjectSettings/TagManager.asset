@@ -8,6 +8,7 @@ TagManager:
   - PowerUpSpeed
   - PowerUpDoubleJump
   - Bounce
+  - Bullet
   layers:
   - Default
   - TransparentFX

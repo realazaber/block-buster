@@ -25,6 +25,5 @@ public class TopDownBouncer : MonoBehaviour
             print("Bounced");
             _speed *= -1;
         }
-        print("NIGGER");
     }
 }
