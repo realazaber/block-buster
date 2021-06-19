@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - PowerUpSpeed
   - PowerUpDoubleJump
+  - Bounce
   layers:
   - Default
   - TransparentFX
