@@ -15,8 +15,10 @@ public class checkDeath : MonoBehaviour
 
     private void Start()
     {
-
-    }
+        _youDiedMenu.SetActive(false);
+        _topPlayerDied.SetActive(false);
+        _bottomPlayerDied.SetActive(false);
+    }   
 
     private void Update()
     {
