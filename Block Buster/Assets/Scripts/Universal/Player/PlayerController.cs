@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     public float _jumpHeight = 350;
     public int _jumpCount = 0;
+    public int _maxJumps = 1;
 
     //Keys
     public KeyCode _right;
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour
             _faceLeftModel.SetActive(false);
             _playerRigidbody.AddForce(transform.right * _speed);
             print("Player move right");
-            if (Input.GetKeyDown(_jump) && _jumpCount < 2)
+            if (Input.GetKeyDown(_jump) && _jumpCount < _maxJumps)
             {
                 _jumpCount++;
                 _playerRigidbody.AddForce(transform.up * _jumpHeight);
@@ -68,20 +69,20 @@ public class PlayerController : MonoBehaviour
             _faceLeftModel.SetActive(true);
             _playerRigidbody.AddForce(transform.right * _speed * -1);
             print("Player move left");
-            if (Input.GetKeyDown(_jump) && _jumpCount < 2)
+            if (Input.GetKeyDown(_jump) && _jumpCount < _maxJumps)
             {
                 _jumpCount++;
                 _playerRigidbody.AddForce(transform.up * _jumpHeight);
                 print("Player jump");
             }
         }
-        else if (Input.GetKeyDown(_jump) && _jumpCount < 2)
+        else if (Input.GetKeyDown(_jump) && _jumpCount < _maxJumps)
         {
             _jumpCount++;
             _playerRigidbody.AddForce(transform.up * _jumpHeight);
             print("Top player jump");
         }
-        else if (Input.GetKeyDown(_bothJump) && _jumpCount < 2)
+        else if (Input.GetKeyDown(_bothJump) && _jumpCount < _maxJumps)
         {
             _jumpCount++;
             _playerRigidbody.AddForce(transform.up * _jumpHeight);
@@ -96,6 +97,18 @@ public class PlayerController : MonoBehaviour
         {
             print("Touched the ground");
             _jumpCount = 0;
+        }
+
+        if (other.gameObject.tag == "PowerUpSpeed")
+        {
+            print("Speed power up");
+            _speed *= 2;
+        }
+
+        if (other.gameObject.tag == "PowerUpDoubleJump")
+        {
+            print("Can double jump");
+            _maxJumps = 2;
         }
     }
 }
