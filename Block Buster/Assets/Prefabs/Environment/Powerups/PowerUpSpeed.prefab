@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6979798914390554758}
   - component: {fileID: 6979798914390554753}
   - component: {fileID: 6979798914390554752}
+  - component: {fileID: 7257176259359805938}
   m_Layer: 0
   m_Name: PowerUpSpeed
   m_TagString: PowerUpSpeed
@@ -58,6 +59,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56c12c0a09e81e499f91257e009cdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7257176259359805938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979798914390554759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3e9c73d4993ec4bb934ef134235503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _turnSpeed: 200
 --- !u!1 &6979798914805711286
 GameObject:
   m_ObjectHideFlags: 0

@@ -2083,7 +2083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -583, y: -142}
+  m_AnchoredPosition: {x: -583, y: -180}
   m_SizeDelta: {x: 800, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554124973
@@ -2119,11 +2119,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You can double
-
-    tap the up arrow
-
-    to double jump'
+  m_Text: "If red player has double\njump powerup double\npress up arrow to \ndouble
+    jump"
 --- !u!222 &1554124974
 CanvasRenderer:
   m_ObjectHideFlags: 0
