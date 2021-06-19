@@ -11,16 +11,27 @@ public class checkDeath : MonoBehaviour
     public GameObject _topPlayerDied;
     public GameObject _bottomPlayerDied;
 
+    public GameObject _world;
+
+    private void Start()
+    {
+
+    }
+
     private void Update()
     {
         if (_topPlayer.activeSelf == false)
         {
+            print("Blue died");
+            _world.SetActive(false);
             _youDiedMenu.SetActive(true);
             _topPlayerDied.SetActive(true);
         }
 
         if (_bottomPlayer.activeSelf == false)
         {
+            print("Red died");
+            _world.SetActive(false);
             _youDiedMenu.SetActive(true);
             _bottomPlayerDied.SetActive(true);
         }

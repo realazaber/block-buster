@@ -3418,9 +3418,24 @@ PrefabInstance:
       objectReference: {fileID: 1524372711}
     - target: {fileID: 5751943594332537532, guid: 6e8ddb70c35df3945b7a81c27537ece6,
         type: 3}
+      propertyPath: _world
+      value: 
+      objectReference: {fileID: 1990891607}
+    - target: {fileID: 5751943594332537532, guid: 6e8ddb70c35df3945b7a81c27537ece6,
+        type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5751943594332537532, guid: 6e8ddb70c35df3945b7a81c27537ece6,
+        type: 3}
+      propertyPath: _topPlayer
+      value: 
+      objectReference: {fileID: 268734477}
+    - target: {fileID: 5751943594332537532, guid: 6e8ddb70c35df3945b7a81c27537ece6,
+        type: 3}
+      propertyPath: _bottomPlayer
+      value: 
+      objectReference: {fileID: 394886192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8ddb70c35df3945b7a81c27537ece6, type: 3}
 --- !u!1001 &7048179827506268009
