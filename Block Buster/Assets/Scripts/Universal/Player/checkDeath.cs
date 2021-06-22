@@ -38,5 +38,4 @@ public class checkDeath : MonoBehaviour
             _bottomPlayerDied.SetActive(true);
         }
     }
-
 }
